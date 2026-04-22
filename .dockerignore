@@ -1,0 +1,11 @@
+node_modules
+vendor
+.env
+.git
+storage/*.log
+public/storage
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+ca.pem
