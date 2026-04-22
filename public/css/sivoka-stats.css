@@ -1,0 +1,57 @@
+/* ========================================
+   SiVOKA-SLB - STATISTICS CARDS
+   ======================================== */
+
+.stat-card {
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    opacity: 0.5;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.stats-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    flex: 1 1 150px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    border-left: 4px solid #0d6efd;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0d6efd;
+    line-height: 1.2;
+}

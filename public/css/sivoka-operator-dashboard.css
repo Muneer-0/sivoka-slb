@@ -1,0 +1,448 @@
+/* ========================================
+   SiVOKA-SLB - OPERATOR DASHBOARD STYLES
+   ======================================== */
+
+/* ===== WELCOME SECTION ===== */
+.welcome-section {
+    background: linear-gradient(135deg, #667eea 0%, #2c3aff 100%);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0.5;
+}
+
+.welcome-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.school-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 2;
+}
+
+.school-badge i {
+    margin-right: 8px;
+}
+
+/* ===== STATISTICS CARDS ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13,110,253,0.1);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.stat-icon.program {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stat-icon.student {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.stat-icon.category {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1.2;
+}
+
+.stat-unit {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 400;
+    margin-left: 3px;
+}
+
+/* ===== SECTION HEADER ===== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-header h5 i {
+    color: #0d6efd;
+    background: #e7f1ff;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.section-header a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.2s;
+}
+
+.section-header a:hover {
+    gap: 8px;
+}
+
+/* ===== SCHOOL INFO CARD ===== */
+.school-info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.school-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item .label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.info-item .value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-item .value i {
+    color: #0d6efd;
+    font-size: 0.9rem;
+}
+
+/* ===== PROGRAM CARDS ===== */
+.program-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.program-item {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.program-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 15px rgba(13,110,253,0.1);
+}
+
+.program-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 12px;
+}
+
+.program-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 3px;
+}
+
+.program-category {
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.program-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-inactive {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.program-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.program-stat {
+    text-align: center;
+}
+
+.program-stat .label {
+    font-size: 0.7rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.program-stat .value {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.program-achievement {
+    background: #f8f9fc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.program-achievement i {
+    color: #ffc107;
+}
+
+.program-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+/* ===== ACTION BUTTON ===== */
+.btn-detail {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.btn-detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .welcome-section {
+        padding: 20px;
+    }
+    
+    .welcome-title {
+        font-size: 1.3rem;
+    }
+    
+    .stats-grid {
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 15px 10px;
+    }
+    
+    .stat-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+    
+    .stat-value {
+        font-size: 1.4rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .school-info-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .program-item {
+        padding: 15px;
+    }
+    
+    .program-name {
+        font-size: 1rem;
+    }
+    
+    .program-stats {
+        gap: 5px;
+    }
+    
+    .program-actions .btn-sm {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .welcome-title {
+        font-size: 1.1rem;
+    }
+    
+    .school-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .stat-card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 12px;
+    }
+    
+    .stat-icon {
+        margin-bottom: 0;
+    }
+    
+    .stat-content {
+        flex: 1;
+    }
+    
+    .stat-value {
+        font-size: 1.3rem;
+    }
+    
+    .program-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+    }
+    
+    .program-stat .label {
+        font-size: 0.65rem;
+    }
+    
+    .program-stat .value {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,84 @@
+/* ========================================
+   SiVOKA-SLB - ACTION ICONS STYLES
+   ======================================== */
+
+.action-icons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-icon-primary {
+    background: #cfe2ff;
+    color: #084298;
+}
+
+.btn-icon-primary:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+.btn-icon-warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.btn-icon-warning:hover {
+    background: #ffc107;
+    color: #000;
+}
+
+.btn-icon-danger {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.btn-icon-danger:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-icon-info {
+    background: #cfe2ff;
+    color: #084298;
+}
+
+.btn-icon-info:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .btn-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .btn-icon i {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-icon {
+        width: 26px;
+        height: 26px;
+    }
+    .btn-icon i {
+        font-size: 0.7rem;
+    }
+}

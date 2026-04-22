@@ -1,0 +1,291 @@
+/* ========================================
+   SiVOKA-SLB - SIDEBAR DROPDOWN STYLES
+   ======================================== */
+
+/* Dropdown Menu Styles */
+.has-dropdown {
+    position: relative;
+    display: block;
+}
+
+/* Menu item yang memiliki dropdown */
+.has-dropdown > .menu-item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.has-dropdown > .menu-item span {
+    flex: 1;
+}
+
+.has-dropdown > .menu-item .dropdown-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.has-dropdown.active > .menu-item .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Submenu */
+.dropdown-submenu {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-submenu.show {
+    display: block;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu item di dalam submenu */
+.dropdown-menu-item {
+    padding: 8px 15px 8px 55px !important;
+    font-size: 0.8rem !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.dropdown-menu-item:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding-left: 60px !important;
+}
+
+.dropdown-menu-item i {
+    width: 22px;
+    font-size: 0.85rem;
+}
+
+.dropdown-menu-item.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+/* Menu item biasa */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.menu-item i {
+    width: 22px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.menu-item.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Menu heading */
+.menu-heading {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 8px 15px 3px;
+    margin-top: 8px;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidebar-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-header img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: white;
+}
+
+.sidebar-header p {
+    font-size: 0.65rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Sidebar menu container */
+.sidebar-menu {
+    padding-bottom: 20px;
+}
+
+/* Sidebar scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+/* ===== SIDEBAR MOBILE STYLES ===== */
+@media (max-width: 768px) {
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 280px;
+        z-index: 1050;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    /* Overlay */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+        display: none;
+    }
+    
+    .sidebar-overlay.active {
+        display: block;
+    }
+    
+    /* Body scroll lock */
+    body.sidebar-open {
+        overflow: hidden;
+    }
+    
+    /* Main content */
+    .main-content {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+    
+    /* Dropdown submenu di mobile */
+    .dropdown-submenu {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-menu-item {
+        padding: 6px 15px 6px 50px !important;
+    }
+    
+    .menu-item {
+        padding: 8px 15px;
+    }
+    
+    .menu-heading {
+        padding: 6px 15px 2px;
+        margin-top: 5px;
+    }
+    
+    .sidebar-header {
+        padding: 12px 15px;
+    }
+    
+    .sidebar-header img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .sidebar-header h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop (di atas 768px) */
+@media (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0) !important;
+    }
+    
+    .sidebar-overlay {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 280px;
+    }
+    
+    .sidebar-close {
+        display: none;
+    }
+}

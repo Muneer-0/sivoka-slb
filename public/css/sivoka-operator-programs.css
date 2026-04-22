@@ -1,0 +1,595 @@
+/* ========================================
+   SiVOKA-SLB - OPERATOR PROGRAMS STYLES
+   ======================================== */
+
+/* ===== HEADER SECTION ===== */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #2c3aff 100%);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0.5;
+}
+
+.page-header h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-header p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.school-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    backdrop-filter: blur(5px);
+    margin-top: 8px;
+}
+
+.school-badge i {
+    margin-right: 6px;
+    font-size: 0.8rem;
+}
+
+/* ===== STATISTICS CARDS ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 14px;
+    padding: 15px 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.stat-icon.total {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stat-icon.active {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.stat-icon.students {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 3px;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1.2;
+}
+
+/* ===== FILTER SECTION ===== */
+.filter-card {
+    background: white;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.filter-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-title i {
+    color: #0d6efd;
+    background: #e7f1ff;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filter-group label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 8px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13,110,253,0.1);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-filter {
+    background: linear-gradient(135deg, #667eea 0%, #2c3aff 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-reset {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ===== PROGRAM CARDS (UNTUK MOBILE) ===== */
+.program-cards {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.program-card {
+    background: white;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.program-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 10px;
+}
+
+.program-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 2px;
+}
+
+.program-category {
+    font-size: 0.75rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.program-status {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-inactive {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.program-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 12px 0;
+    padding: 8px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.program-stat {
+    text-align: center;
+}
+
+.program-stat .label {
+    font-size: 0.6rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.program-stat .value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.program-facilities {
+    background: #f8f9fc;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    color: #495057;
+}
+
+.program-achievement {
+    background: #fff3cd;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    color: #856404;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.program-achievement i {
+    color: #ffc107;
+    font-size: 0.8rem;
+}
+
+.program-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.program-actions .btn-sm {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+}
+
+/* ===== TABEL UNTUK DESKTOP ===== */
+.table-container {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+}
+
+.table thead th {
+    background: #f8f9fc;
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 12px 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.table td {
+    padding: 10px;
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+/* ===== EMPTY STATE - DIPERKECIL ===== */
+.empty-state {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #d1e7ff;
+    margin-bottom: 10px;
+}
+
+.empty-state h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+/* ===== TOMBOL TAMBAH PROGRAM - DIPERKECIL ===== */
+.btn-add-program {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(67, 233, 123, 0.3);
+}
+
+.btn-add-program:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(67, 233, 123, 0.4);
+}
+
+.btn-add-program i {
+    font-size: 1rem;
+}
+
+.btn-add-program-sm {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 16px;
+    }
+    
+    .page-header h5 {
+        font-size: 1.1rem;
+    }
+    
+    .stats-grid {
+        gap: 8px;
+    }
+    
+    .stat-card {
+        padding: 12px 8px;
+    }
+    
+    .stat-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .stat-value {
+        font-size: 1.2rem;
+    }
+    
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-actions {
+        flex-direction: column;
+    }
+    
+    .btn-filter,
+    .btn-reset {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .table-container {
+        display: none;
+    }
+    
+    .program-cards {
+        display: flex;
+    }
+    
+    .empty-state {
+        padding: 25px 15px;
+    }
+    
+    .empty-state i {
+        font-size: 2.5rem;
+    }
+    
+    .btn-add-program {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .page-header {
+        padding: 14px;
+    }
+    
+    .page-header h5 {
+        font-size: 1rem;
+    }
+    
+    .school-badge {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+    }
+    
+    .stat-icon {
+        margin-bottom: 0;
+    }
+    
+    .stat-content {
+        flex: 1;
+    }
+    
+    .stat-value {
+        font-size: 1.1rem;
+    }
+    
+    .program-title {
+        font-size: 0.95rem;
+    }
+    
+    .program-actions .btn-sm {
+        padding: 3px 6px;
+        font-size: 0.7rem;
+    }
+    
+    .empty-state {
+        padding: 20px 12px;
+    }
+    
+    .empty-state i {
+        font-size: 2rem;
+    }
+    
+    .empty-state h5 {
+        font-size: 0.9rem;
+    }
+    
+    .empty-state p {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .btn-add-program {
+        padding: 7px 14px;
+        font-size: 0.8rem;
+    }
+}
+    /* ===== CATEGORY BADGE (TAMBAHKAN) ===== */
+.category-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.category-global {
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+
+.category-local {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+/* ===== MODAL STYLES (TAMBAHKAN) ===== */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+}
+
+.modal-header {
+    border-radius: 16px 16px 0 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* ===== RESPONSIVE UNTUK MODAL ===== */
+@media (max-width: 480px) {
+    .modal-body {
+        padding: 15px;
+    }
+}

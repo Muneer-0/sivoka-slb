@@ -1,0 +1,651 @@
+/* ========================================
+   SiVOKA-SLB - MONITORING STYLES
+   ======================================== */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #2c3aff 100%);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0.5;
+}
+
+.page-header h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.header-stat {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Statistics Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13,110,253,0.08);
+}
+
+.stat-card.total {
+    border-left: 4px solid #667eea;
+}
+
+.stat-card.sudah {
+    border-left: 4px solid #28a745;
+}
+
+.stat-card.belum {
+    border-left: 4px solid #ffc107;
+}
+
+.stat-card.program {
+    border-left: 4px solid #17a2b8;
+}
+
+.stat-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 2.5rem;
+    opacity: 0.1;
+    color: #212529;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1.2;
+}
+
+.stat-footer {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Progress Card */
+.progress-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.progress-header h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.progress-header h5 i {
+    color: #0d6efd;
+    background: #e7f1ff;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.progress-percentage {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #28a745;
+}
+
+.progress-bar-container {
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Filter Section */
+.filter-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.filter-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-title i {
+    color: #0d6efd;
+    background: #e7f1ff;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-filter {
+    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s;
+}
+
+.btn-filter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+}
+
+.btn-reset {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s;
+}
+
+/* ===== TABEL STYLES ===== */
+.table-container {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 20px;
+}
+
+.table thead th {
+    background: #f8f9fc;
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 15px 12px;
+    border-bottom: 1px solid #e9ecef;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 15px 12px;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+/* Nama Sekolah - DIPERKECIL */
+.school-name-cell {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #212529;
+}
+
+.headmaster-small {
+    font-size: 0.7rem;
+    color: #6c757d;
+    display: block;
+    margin-top: 2px;
+}
+
+.headmaster-small i {
+    font-size: 0.65rem;
+    margin-right: 2px;
+}
+
+/* Badges */
+.badge-negeri {
+    background: #d1e7dd;
+    color: #0f5132;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-swasta {
+    background: #fff3cd;
+    color: #856404;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-akreditasi {
+    background: #e7f1ff;
+    color: #0d6efd;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.program-badge {
+    background: #e7f1ff;
+    color: #0d6efd;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-lengkap {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-belum {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* ===== ACTION ICONS ===== */
+.action-icons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-icon-primary {
+    background: #cfe2ff;
+    color: #084298;
+}
+
+.btn-icon-primary:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+/* Mobile Cards */
+.school-cards {
+    display: none;
+}
+
+.school-card {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.school-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.school-npsn {
+    font-size: 0.7rem;
+    color: #6c757d;
+}
+
+.school-headmaster {
+    font-size: 0.75rem;
+    color: #6c757d;
+    padding: 8px 0;
+}
+
+.school-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #eef2f6;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.detail-label {
+    font-size: 0.6rem;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+.detail-value {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.school-stats {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.stat-box {
+    flex: 1;
+    text-align: center;
+    background: #f8f9fc;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.stat-box .label {
+    font-size: 0.6rem;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+.stat-box .value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.school-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Pagination */
+.pagination-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.pagination-info {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: #d1e7ff;
+    margin-bottom: 15px;
+}
+
+.empty-state h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 20px;
+    }
+    .page-header h4 {
+        font-size: 1.3rem;
+    }
+    .header-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header-stat {
+        width: 100%;
+    }
+    .stats-grid {
+        gap: 10px;
+    }
+    .stat-card {
+        padding: 15px;
+    }
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+    .filter-actions {
+        flex-direction: column;
+    }
+    .btn-filter, .btn-reset {
+        width: 100%;
+        justify-content: center;
+    }
+    .table-container {
+        display: none;
+    }
+    .school-cards {
+        display: block;
+    }
+    .school-name-cell {
+        font-size: 0.75rem;
+    }
+    .btn-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .btn-icon i {
+        font-size: 0.75rem;
+    }
+    .pagination-info {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h4 {
+        font-size: 1.2rem;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .stat-card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .stat-icon {
+        position: relative;
+        right: auto;
+        top: auto;
+        font-size: 2rem;
+        opacity: 0.2;
+        margin-right: 10px;
+    }
+    .stat-content {
+        flex: 1;
+    }
+    .stat-value {
+        font-size: 1.2rem;
+    }
+    .school-title {
+        font-size: 0.85rem;
+    }
+    .btn-icon {
+        width: 26px;
+        height: 26px;
+    }
+    .btn-icon i {
+        font-size: 0.7rem;
+    }
+}
